@@ -1,11 +1,13 @@
 package advent
 
+import scala.annotation.tailrec
 import scala.io.Source
 
-val separator: String = " "
 val data1a: List[String] = Source.fromResource("day1.csv").getLines.toList
 
 def caloriesPerElf(inputData: List[String]): List[Int] = {
+
+  @tailrec
   def splitLists(data:List[String], collector: List[List[String]]): List[List[String]] = {
     val (preList, postList) = data.span(_ != "")
     val collNew = preList :: collector
