@@ -11,10 +11,10 @@ def caloriesPerElf(inputData: List[String]): List[Int] = {
   def splitLists(data:List[String], collector: List[List[String]]): List[List[String]] = {
     val (preList, postList) = data.span(_ != "")
     val collNew = preList :: collector
-    if (preList.isEmpty) collNew
+    if (postList.isEmpty) collNew
     else splitLists(postList.drop(1), collNew)
   }
-   splitLists(inputData, List(List.empty)).drop(1).map(sumCals)
+   splitLists(inputData, List(List.empty)).map(sumCals)
   }
 
 def sumCals(input: List[String]): Int = {
