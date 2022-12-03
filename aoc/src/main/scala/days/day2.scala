@@ -44,7 +44,6 @@ val data2: List[String] = Source.fromResource ("day2.csv").getLines.toList
 
 
   def day2: Unit = {
-  println ("Entering day 2")
   println (day2a)
   println (day2b)
   }
