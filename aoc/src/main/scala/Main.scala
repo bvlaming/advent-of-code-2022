@@ -1,3 +1,3 @@
 package advent
 
-@main def advent_start: Unit = day6
+@main def advent_start: Unit = day7b
